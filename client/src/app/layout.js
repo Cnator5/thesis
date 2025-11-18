@@ -65,6 +65,11 @@ export const metadata = {
     "linkedin:profile": "https://www.linkedin.com/company/yourcompany",
     "facebook:page": "https://www.facebook.com/yourpage",
   },
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({ children }) {
