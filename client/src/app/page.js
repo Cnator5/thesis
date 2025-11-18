@@ -1,0 +1,393 @@
+"use client";
+
+import Head from "next/head";
+import Button from "../components/ui/Button";
+import Image from "next/image";
+import Link from "next/link";
+
+const trustedPartners = [
+  "Ministry of Higher Education",
+  "University of Yaoundé I",
+  "Université de Douala",
+  "Catholic University Institute of Buea",
+  "Cameroon Digital Week",
+  "African Development Bank",
+  "Goethe-Institut Kamerun",
+  "British Council Cameroon",
+  "Institut Français du Cameroun",
+  "Cameroon Reading Association",
+];
+
+const serviceHighlights = [
+  {
+    title: "Topic Development",
+    description:
+      "Clarify research gaps, refine your problem statement, and craft a defendable thesis or project topic aligned with your faculty requirements.",
+  },
+  {
+    title: "Proposal & Chapter Writing",
+    description:
+      "From background and literature review to methodology and discussion, we draft academically rigorous chapters tailored to your discipline.",
+  },
+  {
+    title: "Data Analysis Services",
+    description:
+      "We design instruments, clean datasets, and run advanced statistical or qualitative analysis using SPSS, STATA, R, NVivo, and Atlas.ti.",
+  },
+  {
+    title: "Copy Editing & Proofreading",
+    description:
+      "Ensure every chapter meets citation styles (APA, MLA, Chicago, Harvard) and passes plagiarism and grammar checks before submission.",
+  },
+  {
+    title: "Presentation & Defense Coaching",
+    description:
+      "Build confident slides, anticipate viva voce questions, and rehearse delivery with experienced supervisors and examiners.",
+  },
+  {
+    title: "Business & Capstone Projects",
+    description:
+      "MBA, engineering, and applied research teams trust us for feasibility studies, implementation roadmaps, and impact measurement.",
+  },
+];
+
+const whatsappPrimary = "237651624573";
+const whatsappSupport = "237681326315";
+
+export default function HomePage() {
+  return (
+    <div className="bg-white text-slate-900">
+      <Head>
+        <title>
+          Thesis & Dissertation Writing Services in Cameroon | Excellent Research
+        </title>
+        <meta
+          name="description"
+          content="Excellent Research delivers thesis, dissertation, and academic project writing services in Cameroon. Get expert topic development, proposal writing, data analysis, and defense coaching."
+        />
+        <meta
+          name="keywords"
+          content="thesis writing Cameroon, dissertation help, academic research support, data analysis services, project writing, university research assistance"
+        />
+        <link rel="canonical" href="https://www.yourdomain.com/" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ProfessionalService",
+              name: "Excellent Research",
+              url: "https://www.yourdomain.com/",
+              description:
+                "Excellent Research offers thesis, dissertation, and academic project writing services including topic development, proposal drafting, and data analysis.",
+              areaServed: "Cameroon",
+              contactPoint: {
+                "@type": "ContactPoint",
+                contactType: "customer service",
+                telephone: "+237 651 23 45 67",
+                availableLanguage: ["English", "French"],
+              },
+              sameAs: [
+                "https://www.facebook.com/yourpage",
+                "https://www.linkedin.com/company/yourcompany",
+              ],
+              serviceType: [
+                "Thesis writing",
+                "Dissertation support",
+                "Academic editing",
+                "Data analysis",
+              ],
+            }),
+          }}
+        />
+      </Head>
+
+      <main className="flex flex-col gap-24 pb-32">
+        {/* Hero */}
+        <section className="pt-12 md:pt-16">
+          <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-12 px-4 text-center md:flex-row md:text-left">
+            <div className="md:w-1/2">
+              <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-slate-200 px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-slate-600">
+                Thesis &amp; Dissertation Experts
+              </span>
+              <h1 className="text-4xl font-semibold leading-tight sm:text-5xl">
+                Cameroon&rsquo;s trusted partner for thesis, dissertation, and academic project writing.
+              </h1>
+              <p className="mt-6 text-base text-slate-600 sm:text-lg">
+                We guide undergraduate, postgraduate, and doctoral researchers through every stage of
+                academic writing—from topic validation and proposal drafting to data analysis and final
+                defense preparation. With Excellent Research, every chapter meets faculty expectations
+                and international academic standards.
+              </p>
+              <div className="mt-10 flex flex-wrap items-center justify-center gap-4 md:justify-start">
+                <Button>
+                  <Link href="/contact" className="font-semibold">
+                    Book a thesis strategy call
+                  </Link>
+                </Button>
+                <a
+                  href={`https://wa.me/${whatsappPrimary}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-full border border-emerald-500 px-4 py-2 text-sm font-semibold text-emerald-600 transition hover:bg-emerald-50"
+                  aria-label="Chat with Excellent Research on WhatsApp"
+                >
+                  <span>Chat on WhatsApp</span>
+                  <span aria-hidden>💬</span>
+                </a>
+                <Link
+                  href="#process"
+                  className="text-sm font-semibold text-indigo-600 transition hover:text-indigo-500"
+                >
+                  Discover our writing process →
+                </Link>
+              </div>
+            </div>
+            <div className="w-full md:w-1/2">
+              <div className="overflow-hidden rounded-2xl">
+                <Image
+                  src="/images/thesis-outline.jpg"
+                  alt="Researchers collaborating on a thesis manuscript in the Excellent Research studio"
+                  width={1280}
+                  height={720}
+                  className="h-full w-full object-cover"
+                  priority
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Services Grid */}
+        <section id="services">
+          <div className="mx-auto w-full max-w-6xl px-4">
+            <h2 className="text-center text-3xl font-semibold sm:text-4xl">
+              Comprehensive academic writing services that cover every chapter.
+            </h2>
+            <p className="mx-auto mt-6 max-w-3xl text-center text-base text-slate-600">
+              Our multidisciplinary team of supervisors, methodologists, data analysts, and editors provide
+              end-to-end support for theses, dissertations, capstone projects, feasibility studies, and
+              action research across STEM, social sciences, business, education, and health sciences.
+            </p>
+            <div className="mt-12 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+              {serviceHighlights.map((service) => (
+                <div
+                  key={service.title}
+                  className="flex flex-col gap-3 rounded-2xl border border-slate-200 bg-gradient-to-br from-slate-50 via-white to-slate-100 p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+                >
+                  <h3 className="text-xl font-semibold text-slate-900">{service.title}</h3>
+                  <p className="text-sm text-slate-600">{service.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Process */}
+        <section id="process">
+          <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-12 px-4 md:flex-row md:items-start md:gap-16">
+            <div className="w-full md:w-1/2">
+              <h2 className="text-3xl font-semibold sm:text-4xl">
+                A structured thesis-writing process with transparent milestones.
+              </h2>
+              <p className="mt-6 text-base text-slate-600">
+                We map out deliverables chapter by chapter, ensuring your supervisor&rsquo;s feedback is
+                integrated on time and that institutional formatting guidelines are respected.
+              </p>
+              <ul className="mt-6 space-y-4 text-base text-slate-600">
+                <li>
+                  <strong className="text-slate-900">1. Research Blueprint:</strong> Develop research
+                  questions, objectives, hypotheses, and conceptual framework aligned with your course.
+                </li>
+                <li>
+                  <strong className="text-slate-900">2. Proposal &amp; Literature Review:</strong> Craft
+                  a compelling rationale, synthesize sources, and manage citations using EndNote, Mendeley,
+                  or Zotero.
+                </li>
+                <li>
+                  <strong className="text-slate-900">3. Methodology &amp; Data Collection:</strong> Design
+                  quantitative, qualitative, or mixed-method approaches with instrument validation and ethical compliance.
+                </li>
+                <li>
+                  <strong className="text-slate-900">4. Analysis &amp; Interpretation:</strong> Produce
+                  tables, charts, thematic maps, and statistical summaries ready for defense slides.
+                </li>
+                <li>
+                  <strong className="text-slate-900">5. Editing &amp; Final Submission:</strong> Polish
+                  language, tighten arguments, and format references/pagination for turn-it-in approval.
+                </li>
+              </ul>
+              <Button className="mt-6">
+                <Link href="/services" className="font-semibold">
+                  View detailed service packages
+                </Link>
+              </Button>
+            </div>
+            <div className="w-full md:w-1/2">
+              <div className="rounded-3xl border border-slate-200 bg-white p-4 shadow-2xl">
+                <Image
+                  src="/images/abstract.jpg"
+                  alt="Timeline showing the thesis writing workflow from proposal to defense"
+                  width={1040}
+                  height={780}
+                  className="w-full rounded-xl object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Collaboration */}
+        <section>
+          <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-4 lg:flex-row-reverse lg:items-center lg:gap-16">
+            <div className="w-full lg:w-1/2">
+              <div className="overflow-hidden rounded-2xl">
+                <Image
+                  src="/images/show_off.jpg"
+                  alt="Student collaborating with academic writing coach over a digital workspace"
+                  width={1280}
+                  height={900}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            </div>
+            <div className="w-full space-y-6 lg:w-1/2">
+              <h2 className="text-3xl font-semibold sm:text-4xl">
+                Collaborative, supervisor-ready drafts every week.
+              </h2>
+              <p className="text-base text-slate-600">
+                Track revisions, comment on chapters, and upload supervisor feedback in a secure portal.
+                Our editors respond within 24 hours, ensuring you never miss institutional deadlines.
+              </p>
+              <p className="text-base text-slate-600">
+                Whether you&rsquo;re studying in Yaoundé, Douala, Buea, or abroad, you receive live progress
+                dashboards, version history, and bilingual support (English &amp; French) to maintain
+                academic integrity.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <span className="rounded-full bg-emerald-100 px-4 py-2 text-sm font-semibold text-emerald-700">
+                  95% supervisor approval on first submission
+                </span>
+                <span className="rounded-full bg-indigo-100 px-4 py-2 text-sm font-semibold text-indigo-700">
+                  100+ disciplines covered
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Data Analysis */}
+        <section>
+          <div className="mx-auto flex w-full max-w-6xl flex-col items-center gap-12 px-4 lg:flex-row lg:gap-16">
+            <div className="w-full space-y-6 lg:w-1/2">
+              <h2 className="text-3xl font-semibold sm:text-4xl">
+                Data analysis and visualization that strengthens your findings.
+              </h2>
+              <p className="text-base text-slate-600">
+                Our statisticians and qualitative researchers translate raw data into defendable insights.
+                We handle sampling, instrument reliability, coding, and advanced modelling while ensuring
+                your interpretation aligns with research objectives.
+              </p>
+              <ul className="space-y-3 text-base text-slate-600">
+                <li>✔ Descriptive and inferential statistics, regression, ANOVA, SEM</li>
+                <li>✔ Qualitative coding, thematic analysis, discourse analysis</li>
+                <li>✔ Power calculations, pilot studies, and validation reports</li>
+                <li>✔ Publication-ready tables, charts, and appendices</li>
+              </ul>
+            </div>
+            <div className="w-full lg:w-1/2">
+              <div className="rounded-3xl border border-slate-200 bg-white p-4 shadow-2xl">
+                <div className="overflow-hidden rounded-2xl">
+                  <Image
+                    src="/images/thesis.jpg"
+                    alt="Data analyst interpreting thesis research results on a laptop with charts"
+                    width={1280}
+                    height={830}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Excellent Research Pro */}
+        <section>
+          <div className="mx-auto flex w-full max-w-6xl flex-col-reverse items-center gap-12 px-4 lg:flex-row lg:gap-16">
+            <div className="w-full lg:w-1/2">
+              <div className="rounded-3xl border border-slate-200 bg-white p-4 shadow-2xl">
+                <div className="overflow-hidden rounded-2xl">
+                  <Image
+                    src="/images/thesis_books.jpg"
+                    alt="Academic board reviewing standardized thesis rubrics with analytics"
+                    width={1280}
+                    height={720}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="w-full space-y-6 lg:w-1/2">
+              <h2 className="text-3xl font-semibold sm:text-4xl">
+                Excellent Research Pro for departments and research boards.
+              </h2>
+              <p className="text-base text-slate-600">
+                Standardise evaluation criteria, manage multiple cohorts, and monitor progress across faculties.
+                Configure reviewer workflows, plagiarism checks, and anonymised grading within a secure academic environment.
+              </p>
+              <p className="text-base text-slate-600">
+                Generate analytics on completion rates, publication outputs, and funding allocations to improve
+                research quality year after year.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Trusted Partners */}
+        <section>
+          <div className="mx-auto w-full max-w-6xl px-4">
+            <h2 className="text-center text-3xl font-semibold sm:text-4xl">
+              Trusted by universities, research institutes, and scholarship boards.
+            </h2>
+            <p className="mx-auto mt-4 max-w-3xl text-center text-base text-slate-600">
+              For over a decade, Excellent Research has supported Cameroonian and international scholars
+              in producing impactful academic work that meets funding and accreditation standards.
+            </p>
+            <div className="mt-10 flex flex-wrap justify-center gap-4 text-sm font-semibold text-slate-500">
+              {trustedPartners.map((partner) => (
+                <span
+                  key={partner}
+                  className="rounded-full border border-slate-200 px-4 py-2 transition hover:border-indigo-200 hover:text-indigo-600"
+                >
+                  {partner}
+                </span>
+              ))}
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <div className="fixed rounded bottom-6 right-4 z-50 flex flex-col items-end space-y-3 sm:space-y-4 sm:right-6 sm:bottom-6">
+        <a
+          href={`https://wa.me/${whatsappSupport}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-3 rounded-full bg-emerald-500 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-emerald-500/40 transition-transform hover:scale-105 hover:bg-emerald-600 focus:outline-none focus:ring-2 focus:ring-emerald-300 focus:ring-offset-2"
+          aria-label="Contact Excellent Research support on WhatsApp"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            className="h-5 w-5"
+            aria-hidden="true"
+          >
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.031-.967-.273-.099-.47-.148-.669.15-.198.297-.767.966-.941 1.164-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.61-.916-2.206-.242-.58-.487-.5-.669-.51-.173-.006-.372-.007-.571-.007s-.521.075-.792.372c-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.214 3.074.149.198 2.1 3.205 5.077 4.372.71.306 1.263.489 1.695.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.075-.123-.272-.198-.57-.347zm-5.421 7.617c-1.191 0-2.381-.195-3.509-.577l-3.909 1.024 1.04-3.814c-.673-1.045-1.205-2.181-1.498-3.377C1.212 14.271 0 12.211 0 9.999 0 4.477 5.373 0 12 0c3.185 0 6.187 1.24 8.438 3.488C22.687 5.737 24 8.741 24 12c0 6.627-5.373 12-12 12zm0-22C6.486 2 2 6.486 2 12c0 2.083 1.04 4.166 2.888 5.833l-.96 3.521 3.624-.948C9.834 21.001 10.912 21.2 12 21.2c5.514 0 10-4.486 10-10S17.514 2 12 2z" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  );
+}
