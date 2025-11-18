@@ -48,6 +48,12 @@ app.use(cookieParser());
 
 app.use("/api/auth", limiter);
 
+// Root route for browser or general access
+app.get("/", (_req, res) => {
+  res.json({ message: `Server is running on port ${process.env.PORT || 5000}` });
+});
+
+// Health check route for API monitoring
 app.get("/api/health", (_req, res) => {
   res.json({ status: "ok", message: "Research Guru API running" });
 });
